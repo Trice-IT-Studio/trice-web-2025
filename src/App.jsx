@@ -1,10 +1,11 @@
-import { Button } from "@material-tailwind/react";
+import { Outlet } from "react-router-dom";
+import NavbarComp from "./components/NavbarComp";
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <Button>Button</Button>
+      <NavbarComp />
+      <Outlet />
     </>
   );
 }
