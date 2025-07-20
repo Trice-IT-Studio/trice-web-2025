@@ -2,6 +2,9 @@ import ReviewCard from "../components/ReviewCard";
 import ReviewCarousel from "../components/ReviewCarousel";
 import ServicesCarousel from "../components/Services";
 
+import attribute3 from "../assets/attribute3.png";
+import hero1 from "../assets/hero1.png";
+
 const Home = () => {
   return (
     <div>
@@ -40,7 +43,7 @@ const Home = () => {
             {/* Image */}
             <div className="w-full lg:w-1/2">
               <img
-                src="src/assets/hero1.png"
+                src={hero1}
                 alt="foto profile"
                 className="w-full max-w-xs sm:max-w-md lg:max-w-full mx-auto"
               />
@@ -59,7 +62,7 @@ const Home = () => {
             {/* Image */}
             <div className="w-full lg:w-1/2">
               <img
-                src="src/assets/attribute3.png"
+                src={attribute3}
                 alt="services"
                 className="w-full max-w-xs sm:max-w-md lg:max-w-full mx-auto"
               />

@@ -8,6 +8,9 @@ import {
 } from "@material-tailwind/react";
 import ToggleDark from "./ToggleDark";
 
+import weblogo from "../assets/weblogo.png";
+import weblogodm from "../assets/weblogo(dm).png";
+
 export default function NavbarComp() {
   const [openNav, setOpenNav] = React.useState(false);
   const [isTop, setIsTop] = React.useState(true);
@@ -67,16 +70,8 @@ export default function NavbarComp() {
     ${!isTop ? "shadow-lg" : ""}`}
       >
         <div className="flex items-center justify-between text-blue-gray-900">
-          <img
-            src={"src/assets/weblogo.png"}
-            width="100px"
-            className="dark:hidden"
-          />
-          <img
-            src={"src/assets/weblogo(dm).png"}
-            width="100px"
-            className="hidden dark:flex"
-          />
+          <img src={weblogo} width="100px" className="dark:hidden" />
+          <img src={weblogodm} width="100px" className="hidden dark:flex" />
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <IconButton
