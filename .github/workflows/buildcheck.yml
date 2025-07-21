@@ -13,7 +13,7 @@ jobs:
         uses: bbeesley/build-test-merge-publish@v1.1.0
         with:
           # Command to install package dependencies
-          install-command: npm ci
+          install-command: npm i
           # Command to run to build the package
           build-command: npm run build
           # Command to publish the package
