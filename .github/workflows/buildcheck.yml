@@ -23,7 +23,7 @@ jobs:
           # Command to run to build the package
           build-command: npm run build
           # Command to publish the package
-          # release-command: # optional, default is npm run release
+          release-command: npm run release
           # Branch to release from
           main-branch: main
           # Method to use to merge dependabot PRs
