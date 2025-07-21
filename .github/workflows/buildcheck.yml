@@ -7,6 +7,12 @@ jobs:
     name: enforce successful local build before deployment
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - name: Show path info
+        run: |
+          pwd
+          ls -lah
+
       - name: build-test-merge-publish
         # You may pin to the exact commit or the version.
         # uses: bbeesley/build-test-merge-publish@c942341b8ddf89ece7f1a9462aee06f943feb442
@@ -28,4 +34,3 @@ jobs:
           # private-npm-token: # optional
           # The github username of a bot whose PRs should be auto approved and auto merged
           # auto-merge-bot: # optional
-          
