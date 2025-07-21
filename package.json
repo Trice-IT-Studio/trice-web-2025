@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "buildcheck": "vite build --root /home/runner/work/trice-web-2025",
     "lint": "eslint .",
     "preview": "vite preview"
   },
