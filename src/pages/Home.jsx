@@ -4,6 +4,7 @@ import ServicesCarousel from "../components/Services";
 
 import attribute3 from "../assets/attribute3.png";
 import hero1 from "../assets/hero1.png";
+import FooterComp from "../components/FooterComp";
 
 const Home = () => {
   return (
@@ -139,6 +140,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <FooterComp />
     </div>
   );
 };
