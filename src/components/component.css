@@ -61,5 +61,60 @@
 }
 
 .no-navbar-border {
-    border-bottom: none !important;
+  border-bottom: none !important;
+}
+
+/* Navbar hover underline effect */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #00d4aa 0%, #00b894 100%);
+  /* Sesuaikan dengan warna primary Anda */
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+
+.group:hover .nav-link::after {
+  width: 100%;
+}
+
+/* Alternative: Jika ingin animasi dari tengah */
+.nav-link-center::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #00d4aa 0%, #00b894 100%);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 1px;
+}
+
+.group:hover .nav-link-center::after {
+  width: 100%;
+}
+
+/* Untuk dark mode, pastikan garis tetap terlihat */
+.dark .nav-link::after,
+.dark .nav-link-center::after {
+  background: linear-gradient(135deg, #00d4aa 0%, #00b894 100%);
+}
+
+/* Optional: Efek tambahan untuk mobile */
+@media (max-width: 1024px) {
+  .nav-link::after,
+  .nav-link-center::after {
+    height: 1px;
   }
+}

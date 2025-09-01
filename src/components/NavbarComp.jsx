@@ -7,7 +7,6 @@ import {
   Collapse,
 } from "@material-tailwind/react";
 import ToggleDark from "./ToggleDark";
-
 import weblogo from "../assets/weblogo.png";
 import weblogodm from "../assets/weblogo(dm).png";
 
@@ -28,45 +27,46 @@ export default function NavbarComp() {
       <li className="group">
         <a
           href={`/`}
-          className="mx-8 flex py-2 text-base text-blue-gray-900 group-hover:text-primary dark:text-white"
+          className="nav-link mx-8 flex py-2 text-base text-blue-gray-900 dark:text-white relative transition-colors duration-300 group-hover:text-primary"
         >
           Home
         </a>
       </li>
       <li className="group">
         <a
-          href={`/about`}
-          className="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
+          href="#contact"
+          className="nav-link mx-8 flex py-2 text-base text-dark dark:text-white relative transition-colors duration-300 group-hover:text-primary"
         >
-          About Us
+          Service
         </a>
       </li>
       <li className="group">
         <a
-          href="#portfolio"
-          className="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
+          href={`/about`}
+          className="nav-link mx-8 flex py-2 text-base text-dark dark:text-white relative transition-colors duration-300 group-hover:text-primary"
+        >
+          About
+        </a>
+      </li>
+      <li className="group">
+        <a
+          href="/portfolio"
+          className="nav-link mx-8 flex py-2 text-base text-dark dark:text-white relative transition-colors duration-300 group-hover:text-primary"
         >
           Portfolio
         </a>
       </li>
-      <li className="group">
-        <a
-          href="#contact"
-          className="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
-        >
-          Contact Us
-        </a>
-      </li>
-      <li className="group">
+
+      {/* <li className="group">
         <ToggleDark />
-      </li>
+      </li> */}
     </ul>
   );
 
   return (
     <>
       <Navbar
-        className={`sticky border-none shadow-none inset-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 dark:bg-blue-gray-900
+        className={`sticky border-none shadow-none inset-0 z-50 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 dark:bg-blue-gray-900
     ${!isTop ? "shadow-lg" : ""}`}
       >
         <div className="flex items-center justify-between text-blue-gray-900">
@@ -113,7 +113,6 @@ export default function NavbarComp() {
             </IconButton>
           </div>
         </div>
-
         <Collapse open={openNav}>{navList}</Collapse>
       </Navbar>
     </>

@@ -6,6 +6,8 @@ import Home from "./pages/Home.jsx";
 
 import { ThemeProvider } from "@material-tailwind/react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Portfolio from "./pages/Portfolio.jsx";
+import About from "./pages/About.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -14,7 +16,9 @@ createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<Home />} />
-            {/* Tambahkan route lain di sini */}
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<h1>404</h1>} />
           </Route>
         </Routes>
       </BrowserRouter>
