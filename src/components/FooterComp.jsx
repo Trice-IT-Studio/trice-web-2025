@@ -1,4 +1,5 @@
 import { Typography } from "@material-tailwind/react";
+import weblogoDm from "../assets/weblogo(dm).png";
 
 const FooterComp = () => {
   return (
@@ -186,11 +187,7 @@ const FooterComp = () => {
           <div className="flex flex-wrap">
             <div className="w-full px-4 font-medium text-blue-gray-100">
               <div className="flex flex-row flex-wrap items-center justify-center gap-10 gap-y-6 bg-blue-gray-900 text-center md:justify-between">
-                <img
-                  src="src/assets/weblogo(dm).png"
-                  alt="logo-ct"
-                  className="w-20"
-                />
+                <img src={weblogoDm} alt="logo-ct" className="w-20" />
                 <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
                   <li>
                     <Typography
