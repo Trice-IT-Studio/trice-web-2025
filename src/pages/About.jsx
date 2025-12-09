@@ -2,7 +2,7 @@ const About = () => {
   return (
     <div>
       {/* team */}
-      <div className="w-full relative py-16 bg-white dark:bg-gray-800 py-32">
+      <div className="w-full relative bg-white dark:bg-gray-800 py-32">
         {/* Background Lines */}
         <div className="absolute top-10 right-0 z-0 w-full h-full pointer-events-none">
           <img

@@ -1,5 +1,4 @@
 import PortfolioCard from "../components/PortfolioCard";
-import ServiceCard from "../components/ServiceCard";
 
 const Portfolio = () => {
   return (
@@ -23,6 +22,11 @@ const Portfolio = () => {
             <PortfolioCard
               imgSrc="src/assets/BEPRO-SFX.png"
               title="BEPRO SFX"
+              subtitle="Website"
+            />
+            <PortfolioCard
+              imgSrc="src/assets/companyP.png"
+              title="Dultra Company Profile"
               subtitle="Website"
             />
             <PortfolioCard
