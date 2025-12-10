@@ -2,7 +2,6 @@
 import ReviewCarousel from "../components/ReviewCarousel";
 // import ServicesCarousel from "../components/Services";
 
-import hero1 from "../assets/hero1.png";
 import FooterComp from "../components/FooterComp";
 import ServiceCard from "../components/ServiceCard";
 import { TrendingUp, Search, Smartphone } from "lucide-react";
@@ -105,7 +104,7 @@ const Home = () => {
             {/* Image */}
             <div className="w-full lg:w-1/2">
               <img
-                src={hero1}
+                src="hero1.png"
                 alt="foto profile"
                 className="w-full max-w-xs sm:max-w-md lg:max-w-full mx-auto"
               />

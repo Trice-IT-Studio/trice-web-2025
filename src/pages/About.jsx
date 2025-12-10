@@ -6,7 +6,7 @@ const About = () => {
         {/* Background Lines */}
         <div className="absolute top-10 right-0 z-0 w-full h-full pointer-events-none">
           <img
-            src="src/assets/lines1.png"
+            src="/lines1.png"
             alt="lines background"
             className="absolute right-0 top-0 object-contain opacity-70"
           />
@@ -18,7 +18,7 @@ const About = () => {
             {/* Image */}
             <div className="w-full lg:w-1/2">
               <img
-                src="src/assets/about1.png"
+                src="/about1.png"
                 alt="about1"
                 className="w-full sm:max-w-md mx-auto relative z-10"
               />
@@ -45,7 +45,7 @@ const About = () => {
         {/* Background Lines */}
         <div className="absolute top-0 right-0 z-0 w-full h-full pointer-events-none">
           <img
-            src="src/assets/lines1.png"
+            src="/lines1.png"
             alt="lines background"
             className="absolute left-0 top-0 object-contain opacity-70 scale-[-1]"
           />
@@ -71,7 +71,7 @@ const About = () => {
             {/* Image */}
             <div className="w-full lg:w-1/2">
               <img
-                src="src/assets/about2.png"
+                src="/about2.png"
                 alt="about1"
                 className="w- mx-auto relative z-10"
               />
