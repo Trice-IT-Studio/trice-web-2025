@@ -9,24 +9,17 @@ import {
 import ToggleDark from "./ToggleDark";
 import weblogo from "../assets/weblogo.png";
 import weblogodm from "../assets/weblogo(dm).png";
+import { Link } from "react-router-dom";
 
 export default function NavbarComp() {
   const [openNav, setOpenNav] = React.useState(false);
   const [isTop, setIsTop] = React.useState(true);
 
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setIsTop(window.scrollY === 0);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-blue-gray-900">
       <li className="group">
         <a
-          href={`/`}
+          href="/"
           className="nav-link mx-8 flex py-2 text-base text-blue-gray-900 dark:text-white relative transition-colors duration-300 group-hover:text-primary"
         >
           Home
@@ -34,10 +27,10 @@ export default function NavbarComp() {
       </li>
       <li className="group">
         <a
-          href="#contact"
+          href="/#services"
           className="nav-link mx-8 flex py-2 text-base text-dark dark:text-white relative transition-colors duration-300 group-hover:text-primary"
         >
-          Service
+          Services
         </a>
       </li>
       <li className="group">

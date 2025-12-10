@@ -1,14 +1,17 @@
-import ReviewCard from "../components/ReviewCard";
+// import ReviewCard from "../components/ReviewCard";
 import ReviewCarousel from "../components/ReviewCarousel";
-import ServicesCarousel from "../components/Services";
+// import ServicesCarousel from "../components/Services";
 
-import attribute3 from "../assets/attribute3.png";
 import hero1 from "../assets/hero1.png";
 import FooterComp from "../components/FooterComp";
 import ServiceCard from "../components/ServiceCard";
 import { TrendingUp, Search, Smartphone } from "lucide-react";
+import { useLocation } from "react-router-dom";
+import { useEffect, useLayoutEffect } from "react";
 
 const Home = () => {
+  const location = useLocation();
+
   const whys = [
     {
       title: "Performance",
@@ -36,8 +39,40 @@ const Home = () => {
     </div>
   );
 
+  useLayoutEffect(() => {
+    if (window.location.hash) {
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
+  useEffect(() => {
+    const hash = window.location.hash;
+
+    if (hash) {
+      const SCROLL_DELAY = 400;
+
+      const timeoutId = setTimeout(() => {
+        const targetElement = document.getElementById(hash.substring(1));
+
+        const NavbarHeight = 80;
+        if (targetElement) {
+          const targetPosition =
+            targetElement.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = targetPosition - NavbarHeight;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+          window.history.replaceState(null, null, location.pathname);
+        }
+      }, SCROLL_DELAY);
+
+      return () => clearTimeout(timeoutId);
+    }
+  }, [location.pathname]);
+
   return (
-    <div className="">
+    <div>
       {/* HERO SECTION */}
       <section
         id="hero"

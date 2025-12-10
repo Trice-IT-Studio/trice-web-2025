@@ -5,6 +5,14 @@
   text-align: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 80px; 
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
