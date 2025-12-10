@@ -221,7 +221,7 @@ const FooterComp = () => {
                   <li>
                     <Typography
                       as="a"
-                      href="#"
+                      href="mailto:trice.it.studio@gmail.com"
                       color="white"
                       className="font-normal transition-colors hover:text-teal-400 focus:text-teal-400"
                     >

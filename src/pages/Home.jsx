@@ -91,11 +91,17 @@ const Home = () => {
                 with performance, scalability, and style.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 mt-6">
-                <button className="relative inline-block px-10 py-5 font-medium text-white text-xl bg-primary transition duration-200 ease-out group hover:-translate-y-1">
+                <a
+                  href="https://wa.me/6289605591892"
+                  className="relative inline-block px-10 py-5 font-medium text-white text-xl bg-primary transition duration-200 ease-out group hover:-translate-y-1 cursor-pointer"
+                >
                   <span className="absolute inset-0 border-2 border-primary -translate-x-1 translate-y-1"></span>
                   Lets Talk
-                </button>
-                <button className="relative inline-block px-6 py-3 font-medium text-black text-xl bg-white border-2 border-transparent hover:border-2 hover:border-primary hover:text-primary transition duration-200 ease-out group hover:-translate-y-1">
+                </a>
+                <button
+                  onClick={() => (window.location.href = "/portfolio")}
+                  className="relative inline-block px-6 py-3 font-medium text-black text-xl bg-white border-2 border-transparent hover:border-2 hover:border-primary hover:text-primary transition duration-200 ease-out group hover:-translate-y-1"
+                >
                   View our Works!
                 </button>
               </div>
