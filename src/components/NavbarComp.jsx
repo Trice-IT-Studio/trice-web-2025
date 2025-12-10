@@ -61,8 +61,14 @@ export default function NavbarComp() {
     ${!isTop ? "shadow-lg" : ""}`}
       >
         <div className="flex items-center justify-between text-blue-gray-900">
-          <img src="/weblogo.png" width="100px" className="dark:hidden" />
-          <img src="/weblogo(dm).png" width="100px" className="hidden dark:flex" />
+          <a href="/">
+            <img src="/weblogo.png" width="100px" className="dark:hidden" />
+            <img
+              src="/weblogo(dm).png"
+              width="100px"
+              className="hidden dark:flex"
+            />
+          </a>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <IconButton
