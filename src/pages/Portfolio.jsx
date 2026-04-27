@@ -1,4 +1,8 @@
 import PortfolioCard from "../components/PortfolioCard";
+import companyP from "../assets/companyP.png";
+import smkPerwira from "../assets/SMK-Perwira-Jakarta.png";
+import beproSfx from "../assets/BEPRO-SFX.png";
+import erapor from "../assets/erapor.png";
 
 const Portfolio = () => {
   return (
@@ -15,22 +19,22 @@ const Portfolio = () => {
         <div className="flex justify-center">
           <div className="w-full max-w-screen-xl px-4 lg:px-8 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <PortfolioCard
-              imgSrc="src/assets/companyP.png"
+              imgSrc={companyP}
               title="Dultra Company Profile"
               subtitle="Website"
             />
             <PortfolioCard
-              imgSrc="src/assets/SMK-Perwira-Jakarta.png"
+              imgSrc={smkPerwira}
               title="SMK Perwira Jakarta"
               subtitle="Website"
             />
             <PortfolioCard
-              imgSrc="src/assets/BEPRO-SFX.png"
+              imgSrc={beproSfx}
               title="BEPRO SFX"
               subtitle="Website"
             />
             <PortfolioCard
-              imgSrc="src/assets/erapor.png"
+              imgSrc={erapor}
               title="E-Rapor SMK"
               subtitle="Desktop App"
             />
