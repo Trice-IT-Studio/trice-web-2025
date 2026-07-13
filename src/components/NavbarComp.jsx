@@ -5,17 +5,19 @@ import {
   IconButton,
   Collapse,
 } from "@material-tailwind/react";
+import {useNavigate} from "react-router-dom";
 
 export default function NavbarComp() {
   const [openNav, setOpenNav] = React.useState(false);
   const isTop = true;
+  const navigate = useNavigate();
 
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-blue-gray-900">
       <li className="group">
         <a
-          href="/"
-          className="nav-link mx-8 flex py-2 text-base text-blue-gray-900 dark:text-white relative transition-colors duration-300 group-hover:text-primary"
+          onClick={() => navigate("/")}
+          className="cursor-pointer nav-link mx-8 flex py-2 text-base text-blue-gray-900 dark:text-white relative transition-colors duration-300 group-hover:text-primary"
         >
           Home
         </a>
@@ -23,23 +25,23 @@ export default function NavbarComp() {
       <li className="group">
         <a
           href="/#services"
-          className="nav-link mx-8 flex py-2 text-base text-dark dark:text-white relative transition-colors duration-300 group-hover:text-primary"
+          className="cursor-pointer nav-link mx-8 flex py-2 text-base text-dark dark:text-white relative transition-colors duration-300 group-hover:text-primary"
         >
           Services
         </a>
       </li>
       <li className="group">
         <a
-          href={`/about`}
-          className="nav-link mx-8 flex py-2 text-base text-dark dark:text-white relative transition-colors duration-300 group-hover:text-primary"
+          onClick={() => navigate("/about")}
+          className="cursor-pointer nav-link mx-8 flex py-2 text-base text-dark dark:text-white relative transition-colors duration-300 group-hover:text-primary"
         >
           About
         </a>
       </li>
       <li className="group">
         <a
-          href="/portfolio"
-          className="nav-link mx-8 flex py-2 text-base text-dark dark:text-white relative transition-colors duration-300 group-hover:text-primary"
+          onClick={() => navigate("/portfolio")}
+          className="cursor-pointer nav-link mx-8 flex py-2 text-base text-dark dark:text-white relative transition-colors duration-300 group-hover:text-primary"
         >
           Portfolio
         </a>
@@ -54,7 +56,7 @@ export default function NavbarComp() {
     ${!isTop ? "shadow-lg" : ""}`}
       >
         <div className="flex items-center justify-between text-blue-gray-900">
-          <a href="/">
+          <a onClick={() => navigate("/")}>
             <img src="/weblogo.png" width="100px" className="dark:hidden" />
             <img
               src="/weblogo(dm).png"

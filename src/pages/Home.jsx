@@ -3,11 +3,12 @@ import ReviewCarousel from "../components/ReviewCarousel";
 import FooterComp from "../components/FooterComp";
 import ServiceCard from "../components/ServiceCard";
 import { TrendingUp, Search, Smartphone } from "lucide-react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useLayoutEffect } from "react";
 
 const Home = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const whys = [
     {
@@ -100,7 +101,7 @@ const Home = () => {
                   Lets Talk
                 </a>
                 <button
-                  onClick={() => (window.location.href = "/portfolio")}
+                  onClick={() => navigate('/portfolio')}
                   className="relative inline-block px-6 py-3 font-medium text-black text-xl bg-white border-2 border-transparent hover:border-2 hover:border-primary hover:text-primary transition duration-200 ease-out group hover:-translate-y-1"
                 >
                   View our Works!
