@@ -1,6 +1,4 @@
-// import ReviewCard from "../components/ReviewCard";
 import ReviewCarousel from "../components/ReviewCarousel";
-// import ServicesCarousel from "../components/Services";
 
 import FooterComp from "../components/FooterComp";
 import ServiceCard from "../components/ServiceCard";
@@ -32,11 +30,14 @@ const Home = () => {
     },
   ];
 
-  const ServiceIcon = ({ icon: Icon }) => (
-    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center flex-shrink-0 mt-1">
-      <Icon className="w-5 h-5 text-primary" />
-    </div>
-  );
+  const ServiceIcon = ({ icon }) => {
+    const IconCmp = icon;
+    return (
+      <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center flex-shrink-0 mt-1">
+        <IconCmp className="w-5 h-5 text-primary" />
+      </div>
+    );
+  };
 
   useLayoutEffect(() => {
     if (window.location.hash) {
@@ -164,27 +165,8 @@ const Home = () => {
         id="services"
         className="w-full flex flex-col items-center justify-center pt-5 lg:pt-10 pb-20 bg-white dark:bg-gray-800"
       >
-        {/* <div className="w-full max-w-screen-xl px-4 lg:px-8 mx-auto">
-          <div className="flex flex-col lg:flex-row gap-10 items-center">
-
-            <div className="w-full lg:w-1/2">
-              <img
-                src={attribute3}
-                alt="services"
-                className="w-full max-w-xs sm:max-w-md lg:max-w-full mx-auto"
-              />
-            </div>
-
-            <div className="w-full lg:w-1/2 text-center lg:text-left space-y-5">
-              <h2 className="text-3xl sm:text-4xl font-bold dark:text-white">
-                Our <span className="text-primary">Services</span>
-              </h2>
-              <ServicesCarousel />
-            </div>
-          </div>
-        </div> */}
         <div className="mb-10">
-          <h2 className="text-3xl sm:text-4xl font-bold dark:text-white text-center lg:text-left">
+          <h2 className="text-3xl sm:text-4xl font-bold dark:text-white text-center">
             Our <span className="text-primary">Services</span>
           </h2>
         </div>
@@ -210,7 +192,6 @@ const Home = () => {
               "User authentication & security",
               "API integration & development",
             ]}
-            iconBgColor="from-blue-400 to-blue-600"
             hoverColor="blue-600"
           />
           <ServiceCard
@@ -223,8 +204,31 @@ const Home = () => {
               "Backup & disaster recovery",
               "Technical support 24/7",
             ]}
-            iconBgColor="from-purple-400 to-purple-600"
             hoverColor="purple-600"
+          />
+          <ServiceCard
+            icon="Package"
+            title="Odoo Module Development"
+            description="Kustomisasi dan pengembangan modul Odoo untuk mengoptimalkan proses bisnis Anda."
+            features={[
+              "Custom module development",
+              "Odoo installation & configuration",
+              "Integration with third-party apps",
+              "Workflow automation & migration",
+            ]}
+            hoverColor="orange-600"
+          />
+          <ServiceCard
+            icon="Monitor"
+            title="Laptop & PC Service"
+            description="Perbaikan dan perawatan laptop & PC untuk memastikan performa optimal perangkat Anda."
+            features={[
+              "Hardware repair & upgrade",
+              "Virus removal & system cleanup",
+              "SSD & RAM upgrade",
+              "Regular maintenance check",
+            ]}
+            hoverColor="red-600"
           />
         </div>
       </section>

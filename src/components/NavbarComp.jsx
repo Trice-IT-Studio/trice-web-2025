@@ -2,16 +2,13 @@ import React from "react";
 import "./component.css";
 import {
   Navbar,
-  MobileNav,
   IconButton,
   Collapse,
 } from "@material-tailwind/react";
-import ToggleDark from "./ToggleDark";
-import { Link } from "react-router-dom";
 
 export default function NavbarComp() {
   const [openNav, setOpenNav] = React.useState(false);
-  const [isTop, setIsTop] = React.useState(true);
+  const isTop = true;
 
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-blue-gray-900">
@@ -47,11 +44,7 @@ export default function NavbarComp() {
           Portfolio
         </a>
       </li>
-
-      {/* <li className="group">
-        <ToggleDark />
-      </li> */}
-    </ul>
+     </ul>
   );
 
   return (
